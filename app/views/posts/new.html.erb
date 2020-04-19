@@ -1,5 +1,13 @@
 <h1 class="jquery">Hello jQuery!</h1>
 <%= form_with model: @post do |f|%>
   <%= f.text_field :title%>
-  <%= f.text_area :sentense%>
+  <div id = "book_content">
+    <%= f.text_area :sentense%>
+  </div>
 <% end %>
+
+<script>
+2	    $(function() {
+3	        $('#book_content').froalaEditor();
+4	    });
+5	</script>
