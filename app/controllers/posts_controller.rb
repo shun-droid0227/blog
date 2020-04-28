@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :set_post,{only:[:show,:edit]}
+  before_action :set_post,{only:[:show,:edit,:update,:destroy]}
 
   def new
     @post = Post.new
@@ -20,15 +20,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = post
+    
   end
 
   def edit
-    @post = post
+    
   end
 
   def update
-
+    if @post.update(post_params)
+      redirect_to posts_path
+    end
   end
 
   def destroy
@@ -42,7 +44,10 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    post = Post.find(params[:id])
+    
+    # binding.pry
+    
+    @post = Post.find(params[:id])
   end
 
 end

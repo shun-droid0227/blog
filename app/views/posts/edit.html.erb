@@ -1,9 +1,9 @@
-<%= link_to 'index', posts_path %>
+<h1>edit post</h1>
 
 <%= form_with model: @post do |f|%>
   <%= f.text_field :title%>
   <%= f.text_area :sentence %>
-  <%= f.submit "投稿"%>
+  <%= f.submit "更新"%>
 <% end %>
 
 <script>

@@ -1,4 +1,9 @@
+<%= link_to 'new post', new_post_path %>
 <h1>post#index</h1>
-<%= @post.each do |f| %>
+<% @post.each do |f| %>
+  <%= f.id %>
   <%= f.title %>
+  <%== f.sentence %>
+  <%= link_to 'edit', edit_post_path(f)%>
+  <br>
 <% end %>
