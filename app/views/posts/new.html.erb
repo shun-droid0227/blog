@@ -1,11 +1,10 @@
 <h1 class="jquery">Hello jQuery!</h1>
 <%= form_with model: @post do |f|%>
   <%= f.text_field :title%>
-  <div id = "book_content">
-    
-  </div>
+  <%= f.text_area :sentence %>
+  <%= f.submit "投稿"%>
 <% end %>
 
 <script>
-new FroalaEditor('#book_content', {});
+new FroalaEditor('#post_sentence', {});
 </script>
