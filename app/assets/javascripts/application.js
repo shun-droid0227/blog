@@ -14,9 +14,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 
 //= require froala_editor.min.js
+//= require languages/ja.js
 //= require plugins/align.min.js
 //= require plugins/char_counter.min.js
 //= require plugins/code_beautifier.min.js
@@ -42,4 +42,5 @@
 //= require plugins/table.min.js
 //= require plugins/url.min.js
 //= require plugins/video.min.js
-//= require languages/ja.js
+
+//= require_tree .
