@@ -34,7 +34,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post.destroy
+    redirect_to posts_path
   end
 
   private
@@ -44,9 +45,6 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    
-    # binding.pry
-    
     @post = Post.find(params[:id])
   end
 
