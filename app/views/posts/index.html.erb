@@ -3,7 +3,9 @@
 <% @post.each do |f| %>
   <%= f.id %>
   <%= f.title %>
-  <%== f.sentence %>
+  <div class="fr-view fr-element">
+    <%== f.sentence %>
+  </div>
   <%= link_to 'edit', edit_post_path(f)%>
   <%= link_to 'destroy', post_path(f), method: :delete%>
   <br> 
